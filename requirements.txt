@@ -1,0 +1,9 @@
+langchain-core
+langchain-openai
+langchain-anthropic
+langgraph
+
+# Optional — useful depending on your agent idea
+requests
+beautifulsoup4
+python-dotenv

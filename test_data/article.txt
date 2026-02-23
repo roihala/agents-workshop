@@ -1,0 +1,66 @@
+The Rise of AI Agents: From Chatbots to Autonomous Systems
+
+By Sarah Mitchell | Published November 2024
+
+For the past two years, the AI industry has been obsessed with a single question: how do we move from chatbots that answer questions to agents that actually do things? The answer, it turns out, involves rethinking everything we know about how software makes decisions.
+
+The Chatbot Era (2022-2023)
+
+When ChatGPT launched in November 2022, it felt like magic. You could ask it anything and get a coherent, helpful response. But it had a fundamental limitation: it could only respond. It couldn't act. It couldn't browse the web, run code, check your calendar, or send an email. It was, at its core, a very sophisticated text completion engine.
+
+Companies quickly built chatbots on top of these models. Customer service bots, FAQ bots, writing assistants. They were useful, but limited. Every interaction followed the same pattern: user asks, bot responds, conversation ends. There was no memory between sessions, no ability to take multi-step actions, and no way for the bot to decide on its own what to do next.
+
+The Tool-Use Revolution
+
+The first major shift came with function calling (later called tool use). OpenAI, Anthropic, and Google all added the ability for their models to call external functions. Instead of just generating text, the model could now say "I need to search the web for this" or "I need to calculate this number" and actually execute those operations.
+
+This was a bigger deal than it seemed. Tool use meant that AI could interact with the real world. It could read files, query databases, call APIs, and process data. The model was no longer trapped inside its text generation loop. It had hands.
+
+But tool use alone wasn't enough. A model that can call tools is still fundamentally reactive. It waits for a prompt, decides which tool to use, calls it, and returns the result. There's no planning, no iteration, no self-evaluation. It's a single step, not a workflow.
+
+Enter the Agent
+
+An agent is what you get when you combine an LLM with tools, memory, and a loop. The key innovation is the loop: the agent doesn't just respond once. It thinks, acts, observes the result, and then decides what to do next. It can try something, realize it didn't work, and try a different approach. It can break a complex task into subtasks and work through them one by one.
+
+The simplest agent architecture looks like this:
+
+1. Receive a goal
+2. Plan the steps needed to achieve the goal
+3. Execute the first step (using a tool)
+4. Observe the result
+5. Decide: is the goal achieved? If yes, stop. If no, go to step 3.
+
+This loop is what separates agents from chatbots. A chatbot gives you one answer. An agent works toward a goal, adapting its approach based on what it learns along the way.
+
+Frameworks: LangGraph, CrewAI, and AutoGen
+
+Several frameworks have emerged to make building agents easier:
+
+LangGraph (by LangChain) takes a graph-based approach. You define your agent as a state machine with nodes (actions) and edges (transitions). The state flows through the graph, and conditional edges let you create loops and branches. It's explicit and debuggable: you can see exactly what path the agent took and why.
+
+CrewAI focuses on multi-agent collaboration. Instead of one agent doing everything, you define a "crew" of specialized agents that work together. A researcher agent gathers information, a writer agent drafts content, a reviewer agent checks quality. Each agent has its own role, tools, and expertise.
+
+AutoGen (by Microsoft) emphasizes conversational agents that can talk to each other. Agents are defined as participants in a group chat, and they collaborate by exchanging messages. It's particularly good for scenarios where agents need to debate, negotiate, or build on each other's ideas.
+
+The Hard Problems
+
+Building agents that work reliably is harder than it looks. The main challenges:
+
+Evaluation: How do you know if the agent's output is good enough? In a simple Q&A chatbot, you can check if the answer is correct. But when an agent writes a report, cleans a dataset, or plans a project, "correct" is subjective. Most agent architectures solve this with a self-evaluation step: the agent critiques its own work and decides whether to iterate or stop.
+
+Infinite loops: If the agent's self-evaluation is too strict, it will loop forever, never satisfied with its output. If it's too lenient, it will stop after one mediocre attempt. Finding the right balance requires careful prompt engineering and safety valves (maximum iteration counts).
+
+Cost and latency: Every loop iteration means another LLM call. A simple agent that loops 3 times costs 3x as much and takes 3x as long as a single LLM call. Production agents need to balance quality (more iterations) against cost and speed (fewer iterations).
+
+Context management: As the agent works through a task, it accumulates context: previous attempts, tool results, intermediate analysis. This context can quickly exceed the model's context window. Agents need strategies for summarizing, compressing, or selectively including context.
+
+What's Next
+
+The agent landscape is evolving fast. Current trends:
+
+- Smaller, specialized agents that do one thing well (instead of one big agent that tries to do everything)
+- Better evaluation frameworks that go beyond "PASS/FAIL" to nuanced quality assessment
+- Human-in-the-loop patterns where the agent asks for human input at critical decision points
+- Multi-modal agents that can see (images), hear (audio), and interact with GUIs (browser automation)
+
+The gap between "demo agent" and "production agent" is still large. But the patterns are established, the tools are maturing, and the community is growing. If you're building your first agent today, you're learning the patterns that will define how software works for the next decade.

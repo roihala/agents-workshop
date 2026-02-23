@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "from": "boss@company.com",
+    "subject": "Q3 Strategy Review - URGENT",
+    "body": "Please prepare the Q3 numbers for Monday's board meeting. The investors are expecting a full breakdown of revenue by segment. This is the top priority for this week.",
+    "urgency": "high",
+    "received_at": "2024-11-18T08:15:00Z"
+  },
+  {
+    "id": 2,
+    "from": "newsletter@techblog.com",
+    "subject": "This Week in AI: New Models, New Benchmarks",
+    "body": "Here are the top stories from the AI world this week: 1) A new open-source model beats GPT-4 on coding benchmarks. 2) Google announces Gemini 2.0. 3) The EU AI Act enforcement begins in February. Click through for full coverage.",
+    "urgency": "low",
+    "received_at": "2024-11-18T07:00:00Z"
+  },
+  {
+    "id": 3,
+    "from": "hr@company.com",
+    "subject": "Updated PTO Policy - Please Acknowledge",
+    "body": "Hi team, we've updated our PTO policy effective January 1st. Key changes: unlimited PTO is now capped at 25 days, carryover is limited to 5 days, and blackout dates apply during Q4 close. Please review and acknowledge by Friday.",
+    "urgency": "medium",
+    "received_at": "2024-11-18T09:30:00Z"
+  },
+  {
+    "id": 4,
+    "from": "client@bigcorp.com",
+    "subject": "RE: Contract Renewal Discussion",
+    "body": "Thanks for the proposal. We've reviewed internally and have some concerns about the pricing for the enterprise tier. Can we schedule a call this week to discuss? Our CFO wants to be on the call. Availability: Tuesday 2-4pm or Thursday morning.",
+    "urgency": "high",
+    "received_at": "2024-11-18T10:45:00Z"
+  },
+  {
+    "id": 5,
+    "from": "security@github.com",
+    "subject": "Dependabot Alert: Critical Vulnerability in lodash",
+    "body": "A critical severity vulnerability was found in lodash (CVE-2024-XXXX) used in your repository my-app. This vulnerability allows prototype pollution leading to remote code execution. We recommend updating to lodash@4.17.22 or later immediately.",
+    "urgency": "high",
+    "received_at": "2024-11-18T06:00:00Z"
+  },
+  {
+    "id": 6,
+    "from": "marketing@saas-tool.com",
+    "subject": "Your Free Trial Expires in 3 Days",
+    "body": "Hi there! Your 14-day free trial of SaaS-Tool Pro is ending on November 21st. Upgrade now to keep access to advanced analytics, custom dashboards, and priority support. Use code SAVE20 for 20% off your first year.",
+    "urgency": "low",
+    "received_at": "2024-11-18T11:00:00Z"
+  },
+  {
+    "id": 7,
+    "from": "teammate@company.com",
+    "subject": "Bug in Production - Customer Checkout Failing",
+    "body": "Hey, just got 3 reports from customers who can't complete checkout. The payment gateway is returning 502 errors. I checked the logs and it looks like our Stripe webhook endpoint is timing out. Can you take a look? I'm in meetings until 2pm.",
+    "urgency": "high",
+    "received_at": "2024-11-18T11:20:00Z"
+  },
+  {
+    "id": 8,
+    "from": "events@meetup.com",
+    "subject": "Upcoming: AI & Coffee Meetup This Saturday",
+    "body": "Join us this Saturday at WeWork TLV for our monthly AI & Coffee meetup. This month's topic: Building production-ready agents with LangGraph. Speaker: Dr. Sarah Chen from Anthropic. RSVP to save your spot. Limited to 40 attendees.",
+    "urgency": "low",
+    "received_at": "2024-11-18T12:00:00Z"
+  }
+]
